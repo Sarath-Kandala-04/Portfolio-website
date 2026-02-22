@@ -1,5 +1,33 @@
-# Portfolio-website
+# Portfolio Website
 
-A portfolio website is a digital platform that showcases an individual's professional work, projects, and skills. It typically contains sections highlighting the creator's background, experience, and education, along with a portfolio showcasing their best projects and accomplishments.
+A clean and customizable personal portfolio template built with HTML and CSS.
 
-In the above file you are free to change and customize according to your portfolio in both the css and html files, even the picture of your choice :)
+## Overview
+This project is a simple portfolio website starter that helps you present:
+- Your introduction and personal brand
+- Your featured projects
+- Your skills and tools
+- Your education and/or experience
+- Contact details or social links
+
+## Customization
+You can easily personalize the template by editing:
+- `index.html` for content and structure
+- `style.css` for colors, spacing, typography, and layout
+- Image assets with your own profile/project images
+
+## Getting Started
+1. Clone or download this repository.
+2. Open the project folder.
+3. Edit the HTML and CSS files with your own details.
+4. Open `index.html` in your browser to preview.
+
+## Suggested Sections
+- Hero / Introduction
+- About Me
+- Projects
+- Skills
+- Contact
+
+## License
+Feel free to use and modify this template for your personal portfolio.
