@@ -149,6 +149,27 @@
             link.setAttribute('target', '_blank');
             link.setAttribute('rel', 'noopener noreferrer');
         });
+
+        const sections = Array.from(document.querySelectorAll('section'));
+
+        const updateSectionFocus = () => {
+            const viewportMiddle = window.innerHeight / 2;
+
+            sections.forEach((section) => {
+                const rect = section.getBoundingClientRect();
+                const sectionMiddle = rect.top + rect.height / 2;
+                const distanceFromCenter = Math.abs(viewportMiddle - sectionMiddle);
+                const maxDistance = window.innerHeight * 0.65;
+                const focus = Math.max(0, 1 - distanceFromCenter / maxDistance);
+
+                section.style.setProperty('--focus', focus.toFixed(3));
+                section.classList.toggle('is-focused', focus > 0.7);
+            });
+        };
+
+        updateSectionFocus();
+        window.addEventListener('scroll', updateSectionFocus, { passive: true });
+        window.addEventListener('resize', updateSectionFocus);
     </script>
 
     <footer>
