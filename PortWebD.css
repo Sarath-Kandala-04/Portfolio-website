@@ -91,10 +91,9 @@ nav ul li a:hover {
 }
 
 section {
-    --focus: 0;
     padding: 34px 0;
     position: relative;
-    perspective: 1200px;
+    scroll-margin-top: 110px;
 }
 
 section .container {
@@ -102,33 +101,15 @@ section .container {
     border: 1px solid var(--border-soft);
     border-radius: 18px;
     box-shadow: var(--shadow);
-    transform-style: preserve-3d;
-    will-change: transform, opacity, filter;
-    opacity: calc(0.5 + (var(--focus) * 0.5));
-    filter: blur(calc((1 - var(--focus)) * 1.6px));
-    transform:
-        translateY(calc((1 - var(--focus)) * 38px))
-        scale(calc(0.9 + (var(--focus) * 0.15)))
-        rotateX(calc((1 - var(--focus)) * 8deg));
-    transition: transform 0.35s ease, opacity 0.35s ease, filter 0.35s ease, border-color 0.35s ease;
+    opacity: 1;
+    filter: none;
+    transform: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-section::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 78%;
-    height: 100%;
-    transform: translate(-50%, -50%) scale(calc(0.82 + (var(--focus) * 0.32)));
-    background: radial-gradient(circle, rgba(77, 124, 255, 0.25), rgba(56, 189, 248, 0));
-    opacity: calc(var(--focus) * 0.5);
-    pointer-events: none;
-    transition: transform 0.35s ease, opacity 0.35s ease;
-}
-
-section.is-focused .container {
+section .container:hover {
     border-color: rgba(77, 124, 255, 0.6);
+    box-shadow: 0 16px 30px rgba(2, 8, 22, 0.5);
 }
 
 section h2 {
@@ -272,15 +253,8 @@ p, li {
 
 @media (prefers-reduced-motion: reduce) {
     section,
-    section .container,
-    section::after {
+    section .container {
         transition: none;
         animation: none;
-    }
-
-    section .container {
-        opacity: 1;
-        filter: none;
-        transform: none;
     }
 }
