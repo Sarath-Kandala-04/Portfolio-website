@@ -101,15 +101,28 @@ section .container {
     border: 1px solid var(--border-soft);
     border-radius: 18px;
     box-shadow: var(--shadow);
-    opacity: 1;
-    filter: none;
-    transform: none;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    opacity: 0.62;
+    filter: saturate(0.85);
+    transform: translateY(30px) scale(0.97);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.45s ease, opacity 0.45s ease, filter 0.45s ease;
 }
 
 section .container:hover {
     border-color: rgba(77, 124, 255, 0.6);
     box-shadow: 0 16px 30px rgba(2, 8, 22, 0.5);
+}
+
+section .container.is-visible {
+    opacity: 0.9;
+    filter: saturate(1);
+    transform: translateY(0) scale(0.99);
+}
+
+section .container.is-focused {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(56, 189, 248, 0.78);
+    box-shadow: 0 20px 38px rgba(2, 8, 22, 0.62);
 }
 
 section h2 {
@@ -256,5 +269,8 @@ p, li {
     section .container {
         transition: none;
         animation: none;
+        transform: none;
+        opacity: 1;
+        filter: none;
     }
 }
