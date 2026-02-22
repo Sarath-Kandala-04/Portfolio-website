@@ -137,6 +137,28 @@ ul {
     margin-left: 20px;
 }
 
+
+.pop-list {
+    list-style: none;
+    margin-left: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.pop-card {
+    background: rgba(11, 16, 36, 0.75);
+    border: 1px solid rgba(141, 231, 255, 0.22);
+    border-radius: 12px;
+    padding: 14px 16px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.pop-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+    border-color: rgba(141, 231, 255, 0.7);
+}
+
 .arrow-list {
     list-style: none;
     margin-left: 0;

@@ -41,12 +41,12 @@
     <section id="education">
         <div class="container">
             <h2>Education</h2>
-            <ul>
-                <li>
+            <ul class="pop-list">
+                <li class="pop-card">
                     <strong>SRM Institute of Science and Technology</strong> — B.Tech, Computer Science and Engineering (Sep 2021 – Jun 2025)<br>
                     Chennai, TN | CGPA: 8.74
                 </li>
-                <li>
+                <li class="pop-card">
                     <strong>Tirumala Junior College</strong> — MPC (Jun 2019 – Mar 2021)<br>
                     Katheru, AP | Percentage: 96.4
                 </li>
@@ -64,11 +64,11 @@
             </div>
 
             <h2>Certifications</h2>
-            <ul>
-                <li><strong>Microsoft Certified:</strong> Azure AI Fundamentals (AI ML, NLP, Gen-AI, CV)</li>
-                <li><strong>Salesforce Certified AI Associate:</strong> AI applications, generative AI, and business use cases</li>
-                <li><strong>NPTEL:</strong> Introduction to Internet of Things (IIT Kharagpur) — 82%</li>
-                <li><strong>NPTEL:</strong> Cloud Computing (IIT Kharagpur) — 64%</li>
+            <ul class="pop-list">
+                <li class="pop-card"><strong>Microsoft Certified:</strong> Azure AI Fundamentals (AI ML, NLP, Gen-AI, CV)</li>
+                <li class="pop-card"><strong>Salesforce Certified AI Associate:</strong> AI applications, generative AI, and business use cases</li>
+                <li class="pop-card"><strong>NPTEL:</strong> Introduction to Internet of Things (IIT Kharagpur) — 82%</li>
+                <li class="pop-card"><strong>NPTEL:</strong> Cloud Computing (IIT Kharagpur) — 64%</li>
             </ul>
         </div>
     </section>
@@ -120,16 +120,16 @@
     <section id="workshops">
         <div class="container">
             <h2>Workshops</h2>
-            <ul>
-                <li><strong>Design and Develop Workshop — GDSC SRM (Mar 2024):</strong> Worked with Figma and Remix.js to design and translate UI ideas into scalable web apps.</li>
-                <li><strong>Technical Workshop on Data Science — RemarkSkill Education & IIT Madras (Mar 2024):</strong> Learned Python libraries for analysis and visualization through a guided mini project.</li>
+            <ul class="pop-list">
+                <li class="pop-card"><strong>Design and Develop Workshop — GDSC SRM (Mar 2024):</strong> Worked with Figma and Remix.js to design and translate UI ideas into scalable web apps.</li>
+                <li class="pop-card"><strong>Technical Workshop on Data Science — RemarkSkill Education & IIT Madras (Mar 2024):</strong> Learned Python libraries for analysis and visualization through a guided mini project.</li>
             </ul>
 
             <h2>Technical Skills</h2>
-            <ul>
-                <li><strong>Languages:</strong> Python, SQL</li>
-                <li><strong>Developer Tools:</strong> GitHub, VS Code, Anaconda, Jupyter, Google Colab</li>
-                <li><strong>Data Visualization:</strong> Microsoft Power BI</li>
+            <ul class="pop-list">
+                <li class="pop-card"><strong>Languages:</strong> Python, SQL</li>
+                <li class="pop-card"><strong>Developer Tools:</strong> GitHub, VS Code, Anaconda, Jupyter, Google Colab</li>
+                <li class="pop-card"><strong>Data Visualization:</strong> Microsoft Power BI</li>
             </ul>
         </div>
     </section>
@@ -137,12 +137,19 @@
     <section id="contact">
         <div class="container">
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:sarathksai04@gmail.com">sarathksai04@gmail.com</a></p>
-            <p>Phone: <a href="tel:+919395141314">+91 93951 41314</a></p>
+            <p>Email: <a href="mailto:sarathksai04@gmail.com" target="_blank" rel="noopener noreferrer">sarathksai04@gmail.com</a></p>
+            <p>Phone: <a href="tel:+919395141314" target="_blank" rel="noopener noreferrer">+91 93951 41314</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/sai-sarath-kandala-999b05317/" target="_blank" rel="noopener noreferrer">linkedin.com/in/sai-sarath-kandala-999b05317</a></p>
             <p>GitHub: <a href="https://github.com/Sarath-Kandala-04" target="_blank" rel="noopener noreferrer">github.com/Sarath-Kandala-04</a></p>
         </div>
     </section>
+
+    <script>
+        document.querySelectorAll('a[href^="http"]').forEach((link) => {
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener noreferrer');
+        });
+    </script>
 
     <footer>
         <div class="container">
