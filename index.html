@@ -139,8 +139,8 @@
             <h2>Contact</h2>
             <p>Email: <a href="mailto:sarathksai04@gmail.com" target="_blank" rel="noopener noreferrer">sarathksai04@gmail.com</a></p>
             <p>Phone: <a href="tel:+919395141314" target="_blank" rel="noopener noreferrer">+91 93951 41314</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/sai-sarath-kandala-999b05317/" target="_blank" rel="noopener noreferrer">linkedin.com/in/sai-sarath-kandala-999b05317</a></p>
-            <p>GitHub: <a href="https://github.com/Sarath-Kandala-04" target="_blank" rel="noopener noreferrer">github.com/Sarath-Kandala-04</a></p>
+            <p>LinkedIn: <a class="external-profile-link" href="https://www.linkedin.com/in/sai-sarath-kandala-999b05317/" target="_blank" rel="noopener noreferrer">linkedin.com/in/sai-sarath-kandala-999b05317</a></p>
+            <p>GitHub: <a class="external-profile-link" href="https://github.com/Sarath-Kandala-04" target="_blank" rel="noopener noreferrer">github.com/Sarath-Kandala-04</a></p>
         </div>
     </section>
 
@@ -153,6 +153,12 @@
         (() => {
             const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             const cards = [...document.querySelectorAll('section .container')];
+            const externalProfileLinks = document.querySelectorAll('.external-profile-link');
+            externalProfileLinks.forEach((link) => {
+                link.setAttribute('target', '_blank');
+                link.setAttribute('rel', 'noopener noreferrer');
+            });
+
 
             if (!cards.length) return;
 
